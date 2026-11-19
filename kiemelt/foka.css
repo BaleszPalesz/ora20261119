@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#E4E7EC;
+    font-family:Arial,sans-serif;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:20px auto;
+}
+
+header{
+    background:url("csoport.jpeg");
+    background-size:cover;
+    background-position:center;
+    height:180px;
+    border-radius:15px 15px 0 0;
+    padding:20px;
+}
+
+header h1{
+    color:#1E242B;
+}
+
+nav{
+    background:#6E7B8B;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+main{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    margin-top:20px;
+}
+
+.video iframe{
+    width:100%;
+    height:350px;
+    border:none;
+    border-radius:15px;
+}
+
+.kiemelt,
+.cikk,
+.galeria{
+    background:#F6F7F9;
+    border:1px solid #CBD2D9;
+    border-radius:15px;
+    padding:15px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-top:10px;
+}
+
+.card img{
+    width:100%;
+    height:100px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.cikk-tartalom{
+    display:flex;
+    gap:15px;
+    margin-top:10px;
+}
+
+.cikk-tartalom img{
+    width:150px;
+    border-radius:10px;
+}
+
+.gallery{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+.gallery img{
+    width:33%;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+footer{
+    background:#3B4654;
+    color:white;
+    margin-top:20px;
+    padding:20px;
+    border-radius:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+footer img{
+    height:60px;
+}
+
+@media(max-width:768px){
+
+    main{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        flex-wrap:wrap;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery{
+        flex-direction:column;
+    }
+
+    .gallery img{
+        width:100%;
+    }
+
+    .cikk-tartalom{
+        flex-direction:column;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+}
